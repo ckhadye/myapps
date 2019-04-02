@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: ckhadye
+Build-Jdk: 11.0.1
+Implementation-Title: dataservice
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.ck.springcloud
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/stockmaster-parent/stockmaster-dataservice
+Created-By: Maven Integration for Eclipse
+

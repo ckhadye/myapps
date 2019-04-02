@@ -1,0 +1,37 @@
+spring:
+  profiles: dev
+  application:
+   name: stockmaster-dev
+environment: dev
+server:
+  port: 8085
+  servlet:
+   context-path: /stockmaster-dev
+
+---
+spring:
+    profiles: prod
+name: stockmaster-prod
+environment: prod
+server:
+##port 0 means dynamically assigned
+  port: 8085
+##  servlet:
+##   context-path: /stockmaster-prod
+
+---
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      ##defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    preferIpAddress: true
+    ##hostname: localhost
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 1
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
