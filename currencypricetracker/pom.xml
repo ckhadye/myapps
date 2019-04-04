@@ -20,6 +20,10 @@
 		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
 	</properties>
 
+	<modules>
+		<module>currency-api</module>
+	</modules>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
