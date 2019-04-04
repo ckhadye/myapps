@@ -5,6 +5,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>CurrencyCoinTracker</name>
   <description>Retrieves currency values from coinbase</description>
+
+	<packaging>pom</packaging>
   
   <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -75,4 +77,4 @@
 		</plugins>
 	</build>
   
-</project>
+	</project>
