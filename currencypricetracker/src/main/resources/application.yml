@@ -1,0 +1,21 @@
+spring:
+  application:
+   name: currency-tracker
+
+server:
+## host:localhost
+  port: 9080
+
+eureka:
+  client:
+    serviceUrl:
+      ##defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    preferIpAddress: true
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 1
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+##    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
