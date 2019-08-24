@@ -7,6 +7,8 @@ public class ResponseDTO {
 	private boolean isSuccess;
 	private  String exception;
 	
+	private UserDTO user;
+	
 	private String errorKey;
 	
 	public String getResponseCode() {
@@ -38,6 +40,12 @@ public class ResponseDTO {
 	}
 	public void setErrorKey(String errorKey) {
 		this.errorKey = errorKey;
+	}
+	public UserDTO getUser() {
+		return user;
+	}
+	public void setUser(UserDTO user) {
+		this.user = user;
 	}
 	
 }

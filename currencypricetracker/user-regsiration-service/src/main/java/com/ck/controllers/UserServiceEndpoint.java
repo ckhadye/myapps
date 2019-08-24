@@ -9,17 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ck.dto.User;
+import com.ck.dto.UserDTO;
 
 @RequestMapping("/user-service")
 public interface UserServiceEndpoint {
 
 //	@PostMapping(path="/register",consumes= {MediaType.APPLICATION_JSON_VALUE}, produces=MediaType.APPLICATION_JSON_VALUE)
 	@PostMapping(path="/register",consumes= {MediaType.APPLICATION_JSON_VALUE})
-	ModelAndView registerUser(User user);
+	ModelAndView registerUser(@RequestBody UserDTO user);
 	
 	@PutMapping(path="/add/{currency}")
 	ModelAndView addCurrency(@PathVariable(name="currency",required=true) String currency);

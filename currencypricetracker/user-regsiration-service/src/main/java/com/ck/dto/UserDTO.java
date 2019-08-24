@@ -2,12 +2,14 @@ package com.ck.dto;
 
 import java.util.List;
 
-public class User {
+public class UserDTO {
 
 	private String userName;
+	private String email;
 	private String password;
 	private String firstName;
 	private String lastName;
+	
 	
 	private String gender;
 	
@@ -69,5 +71,13 @@ public class User {
 
 	public void setCurrencies(List<String> currencies) {
 		this.currencies = currencies;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

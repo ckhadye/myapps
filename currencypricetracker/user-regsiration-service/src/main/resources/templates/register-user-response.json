@@ -1,9 +1,10 @@
 {
 "isSuccess":[(${registration.success})],
 /* "message":[(#{registration.responseMessage})], */
-"message":[(#{${registration.responseMessage}})],
+"message":[(#{${registration.responseMessage}(${registration.user.userName})})],
 /* "message3":[(${#messages.msg('user.registeration.error.key')})], */
 "responseCode":[(${registration.responseCode})],
-"exception":[(${registration.exception})],
-"errorkey":[(#{user.registration.error.key})]
+"exception":[(${registration.exception})]
+/*,
+"errorkey":[(#{user.registration.error.key})]*/
 }
